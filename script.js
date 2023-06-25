@@ -1,22 +1,33 @@
-// const numberOfFilms = prompt("Hom much movies did you watch?", "");
+const numberOfFilms = prompt("Hom much movies did you watch?", "");
 
-// personalMovieDB = {
-//   "count": +numberOfFilms,
-//   "movies": {},
-//   "actors": {},
-//   "genres": [],
-//   "privat": false
-// };
+personalMovieDB = {
+  "count": +numberOfFilms,
+  "movies": {},
+  "actors": {},
+  "genres": [],
+  "privat": false
+};
 
-// firstMovie = prompt("first movie?", "");
-// firstMovieRate = prompt("how would you rate it?", "");
-// secondtMovie = prompt("second movie?", "");
-// secondMovieRate = prompt("how would you rate it?", "");
+if (personalMovieDB.count < 10) {
+  alert("Просмотрено довльно мало фильмов");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+  alert("Вы классический зритель");
+} else if (personalMovieDB.count > 30) {
+  alert("Вы киноман!");
+}
 
-// personalMovieDB.movies[firstMovie] = firstMovieRate;
-// personalMovieDB.movies[secondtMovie] = secondMovieRate;
+for (let i = 0; i <= 1; i++) {
+  do {
+     movie = prompt(`movie ${i + 1} ?`, "");
+  } while (!movie || movie.length > 50);
+  movieRate = prompt("how would you rate it?", "");
+  personalMovieDB.movies[movie] = movieRate;
+}
 
 
-// console.log(personalMovieDB);
+
+console.log(personalMovieDB);
+
+
 
 
